@@ -26,7 +26,7 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   And I uncheck all other checkboxes
   And I submit my search
   And I should see PG and R in ratings colums
-  # enter step(s) to ensure that other movies are not visible
+  And I should not see PG-13, G and NC-17 in ratings colums
 
 Scenario: all ratings selected
   # see assignment

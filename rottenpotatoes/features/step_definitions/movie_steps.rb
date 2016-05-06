@@ -34,7 +34,18 @@ And (/^I should see PG and R in ratings colums$/) do
     assert page.find('#movies').has_content?("R")
   end
 end
-
+And (/^I should not see PG-13, G and NC-17 in ratings colums$/) do
+  if page.respond_to? :should
+    page.find('#movies').should have_no_content("PG-13")
+    page.find('#movies').should have_no_content("<td>G</td>")
+    page.find('#movies').should have_no_content("NC-17")
+  else
+    assert page.find('#movies').has_no_content?("PG-13")
+    assert page.find('#movies').has_no_content?("<td>G</td>")
+    assert page.find('#movies').has_no_content?("NC-17")
+  end 
+end
+   
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   match = /#{e1}.*#{e2}/m =~ page.body
   assert !match.nil?
