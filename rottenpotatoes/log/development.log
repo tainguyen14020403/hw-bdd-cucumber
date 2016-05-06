@@ -493,3 +493,125 @@ Started GET "/assets/application.self.css?body=1" for ::1 at 2015-07-23 13:57:16
 
 
 Started GET "/assets/application.self.js?body=1" for ::1 at 2015-07-23 13:57:16 -0700
+  [1m[36m (18.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (16.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (13.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (9.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (20.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (17.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (18.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (18.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (18.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (17.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (10.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (10.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/assets/rails.png" for 112.137.129.216 at 2016-05-05 07:13:29 +0000
+
+
+Started GET "/movies" for 112.137.129.216 at 2016-05-05 07:13:36 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (55.6ms)
+Completed 200 OK in 332ms (Views: 295.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 112.137.129.216 at 2016-05-05 07:13:37 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 112.137.129.216 at 2016-05-05 07:13:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 112.137.129.216 at 2016-05-05 07:13:37 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 112.137.129.216 at 2016-05-05 07:13:37 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 112.137.129.216 at 2016-05-05 07:13:59 +0000
+
+
+Started GET "/assets/rails.png" for 118.71.191.57 at 2016-05-06 07:26:32 +0000
+
+
+Started GET "/movies" for 118.71.191.57 at 2016-05-06 07:26:37 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (58.2ms)
+Completed 200 OK in 164ms (Views: 124.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-06 07:26:38 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:26:38 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:26:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:26:38 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-06 07:26:46 +0000
+
+
+Started GET "/assets/rails.png" for 118.71.191.57 at 2016-05-06 07:30:13 +0000
+
+
+Started GET "/movies" for 118.71.191.57 at 2016-05-06 07:30:19 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (47.7ms)
+Completed 200 OK in 159ms (Views: 109.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:30:19 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:30:19 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-06 07:30:19 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:30:19 +0000
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&ratings%5BR%5D=1&commit=Refresh" for 118.71.191.57 at 2016-05-06 07:30:25 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://hw-bdd-cucmber-tainguyenleader.c9users.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1" for 118.71.191.57 at 2016-05-06 07:30:26 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')
+  Rendered movies/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-06 07:30:26 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:30:26 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:30:26 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 118.71.191.57 at 2016-05-06 07:30:26 +0000

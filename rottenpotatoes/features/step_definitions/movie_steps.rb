@@ -2,19 +2,42 @@
 
 Given /the following movies exist/ do |movies_table|
   movies_table.hashes.each do |movie|
-    # each returned element will be a hash whose key is the table header.
-    # you should arrange to add that movie to the database here.
+     Movie.create(movie)
   end
-  fail "Unimplemented"
+
 end
 
 # Make sure that one string (regexp) occurs before or after another one
 #   on the same page
 
+When(/^I check the 'PG' and 'R' checkboxes$/) do
+  visit movies_path
+  check('ratings_PG')
+  check('ratings_R')
+end
+
+And (/^I uncheck all other checkboxes$/) do
+  uncheck('ratings_PG-13')
+  uncheck('ratings_NC-17')
+  uncheck('ratings_G')
+end
+
+And (/^I submit my search$/) do
+  click_button('ratings_submit')
+end
+And (/^I should see PG and R in ratings colums$/) do
+  if page.respond_to? :should
+    page.find('#movies').should have_content("PG")
+    page.find('#movies').should have_content("R")
+  else
+    assert page.find('#movies').has_content?("PG")
+    assert page.find('#movies').has_content?("R")
+  end
+end
+
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
-  #  ensure that that e1 occurs before e2.
-  #  page.body is the entire content of the page as a string.
-  fail "Unimplemented"
+  match = /#{e1}.*#{e2}/m =~ page.body
+  assert !match.nil?
 end
 
 # Make it easier to express checking or unchecking several boxes at once
