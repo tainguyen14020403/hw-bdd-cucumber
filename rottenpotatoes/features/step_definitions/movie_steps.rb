@@ -48,8 +48,8 @@ And (/^I should not see PG-13, G and NC-17 in ratings colums$/) do
 end
    
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
-  match = /#{e1}.*#{e2}/m =~ page.body
-  assert !match.nil?
+    ex = e1+" "+e2
+    expect(page).to have_content(ex)
 end
 
 # Make it easier to express checking or unchecking several boxes at once
