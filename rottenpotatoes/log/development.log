@@ -685,3 +685,50 @@ Started GET "/assets/jquery_ujs.self.js?body=1" for 173.44.35.206 at 2016-05-06 
 
 
 Started GET "/assets/application.self.js?body=1" for 173.44.35.206 at 2016-05-06 16:27:49 +0000
+
+
+Started GET "/assets/rails.png" for 118.71.191.57 at 2016-05-07 02:46:19 +0000
+
+
+Started GET "/movies" for 118.71.191.57 at 2016-05-07 02:46:26 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (63.7ms)
+Completed 200 OK in 152ms (Views: 123.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-07 02:46:26 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 118.71.191.57 at 2016-05-07 02:46:26 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 118.71.191.57 at 2016-05-07 02:46:26 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 118.71.191.57 at 2016-05-07 02:46:26 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-07 02:46:31 +0000
+
+
+Started GET "/movies" for 118.71.191.57 at 2016-05-07 02:52:18 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-07 02:52:18 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 118.71.191.57 at 2016-05-07 02:52:18 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 118.71.191.57 at 2016-05-07 02:52:18 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 118.71.191.57 at 2016-05-07 02:52:18 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 118.71.191.57 at 2016-05-07 02:52:21 +0000

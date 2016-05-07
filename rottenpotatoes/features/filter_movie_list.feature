@@ -20,14 +20,16 @@ Background: movies have been added to database
   | Chicken Run             | G      | 21-Jun-2000  |
 
   And  I am on the RottenPotatoes home page
-  Given I check the following ratings: G, PG, R
 
 Scenario: restrict to movies with 'PG' or 'R' ratings
   When I check the 'PG' and 'R' checkboxes
   And I uncheck all other checkboxes
-  And I submit my search
+  And I submit
   And I should see PG and R in ratings colums
   And I should not see PG-13, G and NC-17 in ratings colums
 
 Scenario: all ratings selected
-  # see assignment
+  When I am on the RottenPotatoes home page
+  When I check the following ratings: PG, R, G, PG-13, NC-17
+  And I submit
+  Then I should see all the movies

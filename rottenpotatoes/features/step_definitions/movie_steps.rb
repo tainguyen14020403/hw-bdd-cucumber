@@ -23,7 +23,7 @@ And (/^I uncheck all other checkboxes$/) do
   uncheck('ratings_G')
 end
 
-And (/^I submit my search$/) do
+And (/^I submit$/) do
   click_button('ratings_submit')
 end
 And (/^I should see PG and R in ratings colums$/) do
@@ -71,6 +71,5 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
 end
 
 Then /I should see all the movies/ do
-  # Make sure that all the movies in the app are visible in the table
-  fail "Unimplemented"
+   page.should have_css("table#movies tr", :count=>11)
 end
